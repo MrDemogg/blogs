@@ -1,10 +1,6 @@
 import React from 'react';
 import {Container, Nav, Navbar, Offcanvas} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import Home from "../../../utils/Home";
-import Add from "../../../utils/Add";
-import Contacts from "../../../utils/Contacts";
-import About from "../../../utils/About";
 
 
 const NavBar = () => {
@@ -12,15 +8,15 @@ const NavBar = () => {
     <Navbar bg='dark' expand='md' className='mb-3'>
       <Container fluid>
         <Navbar.Brand>
-          <Link to={<Home />} style={{textDecoration: 'none'}}>My blog</Link>
+          <Link to='/home' style={{textDecoration: 'none'}}>My blog</Link>
         </Navbar.Brand>
         <Navbar.Offcanvas placement="end">
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link><Link to={<Home/>} style={{textDecoration: 'none'}}>Home</Link></Nav.Link>
-              <Nav.Link><Link to={<Add/>} style={{textDecoration: 'none'}}>Add</Link></Nav.Link>
-              <Nav.Link><Link to={<About/>} style={{textDecoration: 'none'}}>About</Link></Nav.Link>
-              <Nav.Link><Link to={<Contacts/>} style={{textDecoration: 'none'}}>Contacts</Link></Nav.Link>
+              <Link to='/home' style={{textDecoration: 'none', margin: '0 10px 0 0'}}>Home</Link>
+              <Link to='/add' style={{textDecoration: 'none', margin: '0 10px 0 0'}}>Add</Link>
+              <Link to='/about' style={{textDecoration: 'none', margin: '0 10px 0 0'}}>About</Link>
+              <Link to='/contacts' style={{textDecoration: 'none', margin: '0 10px 0 0'}}>Contacts</Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
