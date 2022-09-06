@@ -29,7 +29,7 @@ const CardsIdPage = () => {
       <Card.Body>
         <Card.Title>{card.title}</Card.Title>
         <Card.Text dangerouslySetInnerHTML={{__html:
-          card.text}}></Card.Text>
+          card.text}} />
         <div style={{display: 'flex'}}>
           <Button variant='primary' onClick={() => {
             router(`/add/${params.id}`)
